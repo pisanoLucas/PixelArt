@@ -60,7 +60,7 @@ var myPixelDraw = {
                     $(this).css('background-color', myPixelDraw.cellColor);
                     return false;
                 } else {
-                    $(this).css('background-color', myPixelDraw.colorPicked);
+                    $(this).css('background-color', $("#color").val());
                 }
             });
         },
@@ -71,7 +71,7 @@ var myPixelDraw = {
                     var y = e.clientY;
                     var colorDraggedTo = document.elementFromPoint(x, y);
                     if ($(colorDraggedTo).hasClass('cell') && e.button != 2) {
-                        $(colorDraggedTo).css('background-color', myPixelDraw.colorPicked);
+                        $(colorDraggedTo).css('background-color', $("#color").val());
                     } else if ($(colorDraggedTo).hasClass('cell') && e.button == 2) {
                         $(colorDraggedTo).css('background-color', myPixelDraw.cellColor);
                     }
