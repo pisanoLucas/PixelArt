@@ -1,0 +1,51 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+    <script src="pixelart.js"></script>
+    <script src="html2canvas.js"></script>
+    <link rel="stylesheet" href="pixelart.css" />
+    <script type="text/javascript" src="farbtastic.js"></script>
+    <link rel="stylesheet" href="farbtastic.css" type="text/css" />
+    <title>Pixel Art</title>
+</head>
+<script type="text/javascript">
+
+  $(document).ready(function() {
+
+    $('#colorpicker').farbtastic('#color');
+
+  });
+
+</script>
+<body>
+    <div class="proyecto3">
+        <div class="game">
+            <div id="container">
+            </div>
+            <div class="actions">
+            <form><input type="text" id="color" name="color" value="#123456" /></form>
+            <div id="colorpicker">
+            </div>
+               
+                <div class="acciones__botones">
+                    <div class="grilla">
+                        <p>Tamaño</p>
+                        <input type="text" name="resize" id="resize" value="" />
+                        <button id="sizeit" class="btn"><span class="ion-android-arrow-forward"></span></button>
+                    </div>
+                    <button id="reset" class="btn"><span class="ion-trash-a"></span></button>
+                    <button id="toggle-border" class="btn"><span class="ion-ios-grid-view-outline"></span></button>
+                    <button id="grab-it" class="btn"><span class="ion-checkmark"></span></button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
